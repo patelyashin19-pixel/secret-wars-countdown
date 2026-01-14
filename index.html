@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Avengers: Secret Wars Countdown</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Background using provided image */
+body {
+    background: url('secret-wars.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Dark cinematic overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+/* Main content */
+.content {
+    position: relative;
+    z-index: 2;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Release date text */
+.release-date {
+    color: #ffcc00;
+    font-size: 2.3rem;
+    letter-spacing: 4px;
+    margin-bottom: 30px;
+    text-shadow: 0 0 25px rgba(255, 200, 0, 0.9);
+}
+
+/* Countdown size control */
+.tickcounter {
+    max-width: 900px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="overlay"></div>
+
+<div class="content">
+
+    <div class="release-date">
+        17 DECEMBER 2027
+    </div>
+
+    <!-- TickCounter loader -->
+    <script>
+    (function(d, s, id) {
+        var js, pjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//www.tickcounter.com/static/js/loader.js";
+        pjs.parentNode.insertBefore(js, pjs);
+    }(document, "script", "tickcounter-sdk"));
+    </script>
+
+    <!-- Countdown -->
+    <a
+        data-type="countdown"
+        data-id="9166112"
+        class="tickcounter"
+        style="display:block; width:100%; height:0; padding-bottom:25%;"
+        title="AVENGERS SECRET WARS">
+    </a>
+
+</div>
+
+</body>
+</html>
